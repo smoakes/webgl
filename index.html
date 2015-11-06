@@ -113,13 +113,7 @@ try {
   } else {
     if (auth) {
       console.log('Sign in failed because: ', auth.error);
-	gapi.auth.authorize(
-      {
-        client_id: '118728708335-4bqntoa14b6uvlkpbj1ro2hg4kbtv8af.apps.googleusercontent.com',
-        scope: 'https://www.googleapis.com/auth/games',
-        immediate: false
-      },
-      handleAuthResult);
+	gapi.auth.signin();
     }
   }
 };
